@@ -1,5 +1,8 @@
 ---
+- name: "Create Fluent Agent directory"
+  ansible.builtin.file:
+    dest: "/etc/td-agent-bit"
+    state: directory
+    mode: 0644 
 - name: Curl install
-  #ansible.builtin.sh: "curl https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh | sh"
-  debug:
-    msg: "HOLA"
+  ansible.builtin.shell: "curl https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh | sh"
