@@ -1,0 +1,5 @@
+---
+
+- name: Install Debian | Add td-agent-bit apt-key
+  ansible.builtin.sh: |
+    curl https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh | sh

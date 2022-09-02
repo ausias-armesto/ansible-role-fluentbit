@@ -12,6 +12,7 @@
     update_cache: true
   notify: Restart Fluentbit service
   tags: ['install']
+  when: "'Container-Optimized' not in ansible_os_family"
 
 - import_tasks: configure.yml
   tags: ['configure']
