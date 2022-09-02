@@ -1,3 +1,5 @@
 ---
 - name: Curl install
-  ansible.builtin.sh: "curl https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh | sh"
+  #ansible.builtin.sh: "curl https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh | sh"
+  debug:
+    msg: "HOLA"
